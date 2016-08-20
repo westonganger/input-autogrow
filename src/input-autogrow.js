@@ -9,21 +9,29 @@
   var event = 'oninput' in document.createElement('input') ? 'input' : 'keydown';
 
   $.fn.inputAutogrow = function(options){
-    if(options && (options === 'destroy' || $(this).data('autogrowSpan'))){
+    if(options && (options === 'destroy' || $(this).data('autogrow-span'))){
       this.each(function() {
         var input = $(this);
         input.off(event + '.autogrow autogrow');
-        var span = input.data("autogrowSpan");
+        var span = input.data("autogrow-span");
         span.remove();
-        input.data('autogrowSpan','');
+        input.data('autogrow-span','');
       });
 
       if(options === 'destroy'){
+        input.data('original-width','');
         return this;
       }
     }
 
-    var opts = $.extend({ maxWidth: $(this).parent().width(), minWidth: $(this).width(), trailingSpace: 0 }, options);
+    if($(this).data('original-width')){
+      var minWidth = $(this).data('original-width');
+    }else{
+      var minWidth = $(this).width();
+      $(this).data('original-width', minWidth);
+    }
+
+    var opts = $.extend({ maxWidth: $(this).parent().width(), minWidth: minWidth, trailingSpace: 0 }, options);
 
     this.each(function(){
       var input = $(this);
@@ -69,7 +77,7 @@
         }
       };
 
-      input.data("autogrowSpan", span);
+      input.data("autogrow-span", span);
       input.off(event + '.autogrow autogrow').on(event+'.autogrow autogrow', check);
 
       check(); //init on page load
