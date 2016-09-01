@@ -4,8 +4,6 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     del = require('del');
 
-require('gulp-release-it')(gulp);
-
 var paths = {
   src: './src/*.js',
   dist: './dist/'

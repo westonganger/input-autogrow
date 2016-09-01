@@ -32,16 +32,21 @@ end
 # Usage
 ```javascript
 /* Makes elements readonly if they already have the readonly attribute */
-$('input').inputAutogrow();
+$('input.autogrow').inputAutogrow();
+
+/* Manually trigger update */
+$('input.autogrow').trigger('autogrow');
+/* or */
+$('input.autogrow').trigger('change');
 
 /* Update Autogrow field with updated parent container width */
-$('input#my-input').inputAutogrow();
+$('input.autogrow').inputAutogrow();
 
 /* Custom Options */
-$('input#my-input').inputAutogrow({maxWidth: 500, minWidth: 25, trailingSpace: 10});
+$('input.autogrow').inputAutogrow({maxWidth: 500, minWidth: 25, trailingSpace: 10});
 
 /* Remove autogrow from input */
-$('input#my-input').inputAutogrow('destroy');
+$('input.autogrow').inputAutogrow('destroy');
 ```
 
 # Options
