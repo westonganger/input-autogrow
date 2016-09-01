@@ -6,13 +6,13 @@
  */
 
 (function($){
-  var event = 'oninput' in document.createElement('input') ? 'input' : 'keydown';
+  var event = ('oninput' in document.createElement('input')) ? 'input' : 'keydown';
 
   $.fn.inputAutogrow = function(options){
     if(options && (options === 'destroy' || $(this).data('autogrow-span'))){
       this.each(function() {
         var input = $(this);
-        input.off(event + '.autogrow autogrow');
+        input.off(event + '.autogrow autogrow change');
         var span = input.data("autogrow-span");
         span.remove();
         input.data('autogrow-span','');
@@ -78,7 +78,7 @@
       };
 
       input.data("autogrow-span", span);
-      input.off(event + '.autogrow autogrow').on(event+'.autogrow autogrow', check);
+      input.off(event + '.autogrow autogrow change').on(event+'.autogrow autogrow change', check);
 
       check(); //init on page load
     });
