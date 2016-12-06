@@ -5,12 +5,13 @@
 
 # Install
 
+#### Yarn, NPM, or Bower
 ```
-yarn add input-autogrow
-# OR
-npm install input-autogrow
-# OR
-bower install input-autogrow
+yarn add chosen-material-theme
+
+npm install chosen-material-theme
+
+bower install chosen-material-theme
 ```
 
 #### Rails Install
