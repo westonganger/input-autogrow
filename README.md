@@ -5,17 +5,15 @@
 
 # Install
 
-##### Bower
 ```
+yarn add input-autogrow
+# OR
+npm install input-autogrow
+# OR
 bower install input-autogrow
 ```
 
-##### NPM
-```
-npm install input-autogrow
-```
-
-#### Rails
+#### Rails Install
 ```ruby
 # Gemfile
 source 'https://rails-assets.org' do
