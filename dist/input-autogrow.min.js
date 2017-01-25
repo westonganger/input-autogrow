@@ -1,6 +1,6 @@
 /*
  * input-autogrow - jQuery autogrow plugin for inputs
- * @version v0.9.1
+ * @version v1.0.0
  * @link http://github.com/westonganger/input-autogrow
  * @license GNU GPL
  */
