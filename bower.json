@@ -1,6 +1,6 @@
 {
   "name": "input-autogrow",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "description": "jQuery autogrow plugin for inputs",
   "main": "dist/input-autogrow.min.js",
   "directories": {
@@ -24,8 +24,6 @@
     "url": "https://github.com/westonganger/input-autogrow/issues"
   },
   "homepage": "https://github.com/westonganger/input-autogrow",
-  "dependencies": {
-    "jquery": ">=1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {}
 }

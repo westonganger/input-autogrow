@@ -1,6 +1,6 @@
 {
   "name": "input-autogrow",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "description": "jQuery autogrow plugin for inputs",
   "main": "dist/input-autogrow.min.js",
   "directories": {

@@ -1,5 +1,9 @@
 # Changelog
 
+- `v1.0.0 - 2017-01-25`
+  - Release stable v1
+  - Remove jquery dependency from bower.json to solve rails-assets problems
+  - Confirm compatibility with Jquery 1, 2, & 3+
 - `v0.9.1 - 2016-09-01`
   - Add change trigger
 - `v0.9.0 - 2016-08-20`
