@@ -1,5 +1,9 @@
 # Changelog
 
+- `v1.0.1 - 2017-02-27`
+  - Return this from function to support chaining
+  - Allow support for jQuery alternatives such as Zepto
+  - Fix readme instructions
 - `v1.0.0 - 2017-01-25`
   - Release stable v1
   - Remove jquery dependency from bower.json to solve rails-assets problems

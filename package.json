@@ -1,7 +1,7 @@
 {
   "name": "input-autogrow",
-  "version": "1.0.0",
-  "description": "jQuery autogrow plugin for inputs",
+  "version": "1.0.1",
+  "description": "Autogrow plugin for inputs",
   "main": "dist/input-autogrow.min.js",
   "directories": {
     "test": "test"
@@ -15,17 +15,17 @@
     "auto-grow",
     "input",
     "jquery",
+    "zepto",
     "javascript",
     "js"
   ],
   "author": "Weston Ganger",
-  "license": "GNU GPL",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/westonganger/input-autogrow/issues"
   },
   "homepage": "https://github.com/westonganger/input-autogrow",
   "dependencies": {
-    "jquery": ">=1.0"
   },
   "devDependencies": {
     "gulp": "*",

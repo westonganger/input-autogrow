@@ -1,8 +1,8 @@
 /*
- * input-autogrow - jQuery autogrow plugin for inputs
- * @version v1.0.0
+ * input-autogrow - Autogrow plugin for inputs
+ * @version v1.0.1
  * @link http://github.com/westonganger/input-autogrow
- * @license GNU GPL
+ * @license MIT
  */
 
 (function($){
@@ -82,6 +82,7 @@
 
       check(); //init on page load
     });
+
     return this;
-  }
-}(jQuery));
+  };
+}(window.jQuery || window.Zepto || window.$));

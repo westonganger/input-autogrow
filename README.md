@@ -1,17 +1,19 @@
 # input-autogrow
 <a href='https://ko-fi.com/A5071NK' target='_blank'><img height='32' style='border:0px;height:32px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=a' border='0' alt='Buy Me a Coffee' /></a> 
 
-`input-autogrow` is a jQuery plugin for autogrowing inputs. This plugin is different from others because most usually target `textarea` tags, this library is instead targeted at `input` tags.
+`input-autogrow` is a plugin for autogrowing inputs. This plugin is different from others because most usually target `textarea` tags, this library is instead targeted at `input` tags.
+
+Requires a DOM library such as jQuery, Zepto, or any that support $.fn extending.
 
 # Install
 
 #### Yarn, NPM, or Bower
 ```
-yarn add chosen-material-theme
+yarn add input-autogrow
 
-npm install chosen-material-theme
+npm install input-autogrow
 
-bower install chosen-material-theme
+bower install input-autogrow
 ```
 
 #### Rails Install
