@@ -1,18 +1,18 @@
 /*
  * input-autogrow - Autogrow plugin for inputs
- * @version v1.0.1
+ * @version v1.0.2
  * @link http://github.com/westonganger/input-autogrow
  * @license MIT
  */
 
 (function($){
-  var event = ('oninput' in document.createElement('input')) ? 'input' : 'keydown';
+  var events = (('oninput' in document.createElement('input')) ? 'input' : 'keydown') + '.autogrow change.autogrow autogrow';
 
   $.fn.inputAutogrow = function(options){
     if(options && (options === 'destroy' || $(this).data('autogrow-span'))){
       this.each(function() {
         var input = $(this);
-        input.off(event + '.autogrow autogrow change');
+        input.off(events);
         var span = input.data("autogrow-span");
         span.remove();
         input.data('autogrow-span','');
@@ -78,7 +78,7 @@
       };
 
       input.data("autogrow-span", span);
-      input.off(event + '.autogrow autogrow change').on(event+'.autogrow autogrow change', check);
+      input.off(events).on(events, check);
 
       check(); //init on page load
     });

@@ -3,7 +3,7 @@
 
 `input-autogrow` is a plugin for autogrowing inputs. This plugin is different from others because most usually target `textarea` tags, this library is instead targeted at `input` tags.
 
-Requires a DOM library such as jQuery, Zepto, or any that support $.fn extending.
+Requires a DOM library such as jQuery, Zepto, or any that supports $.fn plugins.
 
 # Install
 
