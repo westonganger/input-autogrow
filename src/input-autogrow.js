@@ -38,19 +38,23 @@
       var val = ' ';
       var trailingSpace = (options && 'trailingSpace' in options) ? opts.trailingSpace : parseInt(input.css('fontSize'));
 
-      var span = $('<span/>').css({
-        position: 'absolute',
-        top: -9999,
-        left: -9999,
-        width: 'auto',
-        fontSize: input.css('fontSize'),
-        fontFamily: input.css('fontFamily'),
-        fontWeight: input.css('fontWeight'),
-        letterSpacing: input.css('letterSpacing'),
-        textTransform: input.css('textTransform'),
-        whiteSpace: 'nowrap',
-        ariaHidden: true
-      }).appendTo('body');
+      var span;
+      if ($("#input-autogrow-helper").length > 0)
+        span = $("#input-autogrow-helper");
+      else      
+        span = $('<span/>').css({
+          position: 'absolute',
+          top: -9999,
+          left: -9999,
+          width: 'auto',
+          fontSize: input.css('fontSize'),
+          fontFamily: input.css('fontFamily'),
+          fontWeight: input.css('fontWeight'),
+          letterSpacing: input.css('letterSpacing'),
+          textTransform: input.css('textTransform'),
+          whiteSpace: 'nowrap',
+          ariaHidden: true
+        }).prop("id", "input-autogrow-helper").appendTo('body');
 
       var check = function(e){
         if(val === (val = input.val()) && e.type !== 'autogrow'){
