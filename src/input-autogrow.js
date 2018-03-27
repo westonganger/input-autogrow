@@ -36,6 +36,7 @@
     this.each(function(){
       var input = $(this);
       var val = ' ';
+      options = (typeof options === 'string') ? [options] : options;
       var trailingSpace = (options && 'trailingSpace' in options) ? opts.trailingSpace : parseInt(input.css('fontSize'));
 
       var span = $('<span/>').css({
