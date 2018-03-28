@@ -13,43 +13,43 @@
   };
 
   $.fn.inputAutogrow = function(options){
-    if(options && (options === 'destroy' || $(this).data('autogrow-span'))){
+    if(options){
       this.each(function() {
-        var input = $(this);
-        input.off(events);
-        var span = input.data("autogrow-span");
-        span.remove();
-        input.data('autogrow-span','');
+        if(options === 'destroy' || $(this).data('autogrow-span')){
+          var input = $(this);
+          input.off(events);
+          var span = input.data("autogrow-span");
+          span.remove();
+          input.data('autogrow-span','');
+
+          if(options === 'destroy'){
+            input.data('original-width','');
+          }
+        }
       });
 
       if(options === 'destroy'){
-        input.data('original-width','');
         return this;
       }
     }
 
-    if($(this).data('original-width')){
-      var minWidth = $(this).data('original-width');
-    }else{
-      var minWidth = $(this).width();
-      $(this).data('original-width', minWidth);
-    }
-
-    var opts = { maxWidth: $(this).parent().width(), minWidth: minWidth, trailingSpace: 0 };
-
-    if(isObject(options)){
-      opts = $.extend(opts, options);
-    }
-
     this.each(function(){
       var input = $(this);
-      var val = ' ';
 
-      //var trailingSpace = (options && 'trailingSpace' in options) ? opts.trailingSpace : parseInt(input.css('fontSize'));
-      var trailingSpace = parseInt(input.css('fontSize'));
-      if(options && 'trailingSpace' in options){
-        trailingSpace += opts.trailingSpace;
+      if(input.data('original-width')){
+        var minWidth = input.data('original-width');
+      }else{
+        var minWidth = input.width();
+        input.data('original-width', minWidth);
       }
+
+      var opts = { maxWidth: input.parent().width(), minWidth: minWidth, trailingSpace: 0 };
+
+      if(options && isObject(options)){
+        opts = $.extend(opts, options);
+      }
+
+      var val = ' ';
 
       var span = $('<span/>').css({
         position: 'absolute',
@@ -76,7 +76,7 @@
 
         span.html(val.replace(/&/g, '&amp;').replace(/\s/g, '&nbsp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'));
 
-        var newWidth = span.width() + trailingSpace;
+        var newWidth = span.width() + parseInt(input.css('fontSize')) + opts.trailingSpace;
         var mw = typeof(opts.maxWidth) == "function" ? opts.maxWidth() : opts.maxWidth;
 
         if(newWidth > mw){

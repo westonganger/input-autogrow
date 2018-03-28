@@ -1,6 +1,7 @@
 # Changelog
 
 - `v1.0.3 - Unreleased`
+  - [#6](https://github.com/westonganger/input-autogrow/issues/6) - Fix bug during `destroy` action
   - Fix error when incorrectly attempted to parse options when the event was
   triggered
   - Breaking Change - Improve trailingSpace option to behave more generically
