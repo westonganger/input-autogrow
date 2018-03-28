@@ -17,13 +17,14 @@ gulp.task('clean',function(cb){
 
 gulp.task('minify', ['clean'], function(cb){
   pump([
-    gulp.src(paths.src), 
-    uglify({
-      preserveComments: 'license'
-    }), 
+    gulp.src(paths.src),
+
+    uglify(),
+
     rename({
       suffix: '.min'
     }),
+
     gulp.dest(paths.dist)
   ], cb);
 });
