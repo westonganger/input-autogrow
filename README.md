@@ -32,7 +32,7 @@ end
 
 # Usage
 ```javascript
-/* Makes elements readonly if they already have the readonly attribute */
+/* Makes input elements autogrow */
 $('input.autogrow').inputAutogrow();
 
 /* Manually trigger update */
@@ -60,4 +60,4 @@ $('input.autogrow').inputAutogrow('destroy');
 # Credits
 Created by Weston Ganger - @westonganger
 
-This plugin is based on a [Stackoverflow answer](http://stackoverflow.com/questions/931207) by James Padolsey
+This plugin was originally based on a [Stackoverflow answer](http://stackoverflow.com/questions/931207) by James Padolsey

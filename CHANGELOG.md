@@ -1,5 +1,9 @@
 # Changelog
 
+- `v1.0.3 - Unreleased`
+  - Fix error when incorrectly attempted to parse options when the event was
+  triggered
+  - Breaking Change - Improve trailingSpace option to behave more generically
 - `v1.0.2 - 2017-04-25`
   - Properly namespace events
 - `v1.0.1 - 2017-02-27`

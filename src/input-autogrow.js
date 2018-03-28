@@ -1,12 +1,16 @@
 /*
  * input-autogrow - Autogrow plugin for inputs
- * @version v1.0.2
+ * @version v1.0.3
  * @link http://github.com/westonganger/input-autogrow
  * @license MIT
  */
 
 (function($){
   var events = (('oninput' in document.createElement('input')) ? 'input' : 'keydown') + '.autogrow change.autogrow autogrow';
+
+  var isObject = function(x){
+    return x === Object(x);
+  };
 
   $.fn.inputAutogrow = function(options){
     if(options && (options === 'destroy' || $(this).data('autogrow-span'))){
@@ -31,12 +35,21 @@
       $(this).data('original-width', minWidth);
     }
 
-    var opts = $.extend({ maxWidth: $(this).parent().width(), minWidth: minWidth, trailingSpace: 0 }, options);
+    var opts = { maxWidth: $(this).parent().width(), minWidth: minWidth, trailingSpace: 0 };
+
+    if(isObject(options)){
+      opts = $.extend(opts, options);
+    }
 
     this.each(function(){
       var input = $(this);
       var val = ' ';
-      var trailingSpace = (options && 'trailingSpace' in options) ? opts.trailingSpace : parseInt(input.css('fontSize'));
+
+      //var trailingSpace = (options && 'trailingSpace' in options) ? opts.trailingSpace : parseInt(input.css('fontSize'));
+      var trailingSpace = parseInt(input.css('fontSize'));
+      if(options && 'trailingSpace' in options){
+        trailingSpace += opts.trailingSpace;
+      }
 
       var span = $('<span/>').css({
         position: 'absolute',
