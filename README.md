@@ -5,6 +5,10 @@
 
 Requires a DOM library such as jQuery, Zepto, or any that supports $.fn plugins.
 
+# Demo
+
+TBD
+
 # Install
 
 #### Yarn, NPM, or Bower
@@ -57,7 +61,14 @@ $('input.autogrow').inputAutogrow('destroy');
 
 `trailingSpace` - Default: `0` - This is extra spacing at the end of the input which is used until the maxWidth is hit.
 
-# Credits
-Created by Weston Ganger - @westonganger
+# Contributing
+- Only edit js files from `src/` and `test/` folders.
+- To run tests: `npm run test`
+- Remember to run `gulp` to run the dist build after your done adding and testing your changes.
 
-This plugin was originally based on a [Stackoverflow answer](http://stackoverflow.com/questions/931207) by James Padolsey
+# Credits
+Created & Maintained by Weston Ganger - [@westonganger](https://github.com/westonganger)
+
+Originally based on this [Stackoverflow answer](http://stackoverflow.com/questions/931207) by James Padolsey
+
+For any consulting or contract work please contact me via my company website: [Solid Foundation Web Development](https://solidfoundationwebdev.com)

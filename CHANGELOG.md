@@ -1,6 +1,8 @@
 # Changelog
 
 - `v1.0.3 - Unreleased`
+  - Add demo (TBD)
+  - Add qunit test suite. Run this using `npm run test`
   - [#6](https://github.com/westonganger/input-autogrow/issues/6) - Fix bug during `destroy` action
   - Fix error when incorrectly attempted to parse options when the event was
   triggered

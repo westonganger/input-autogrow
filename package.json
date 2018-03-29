@@ -1,10 +1,13 @@
 {
   "name": "input-autogrow",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "Autogrow plugin for inputs",
   "main": "dist/input-autogrow.min.js",
   "directories": {
     "test": "test"
+  },
+  "scripts": {
+    "test": "if [[ $OSTYPE == \"darwin\"* ]]; then open test/test.html; else xdg-open test/test.html; fi;"
   },
   "repository": {
     "type": "git",
@@ -27,10 +30,10 @@
   "homepage": "https://github.com/westonganger/input-autogrow",
   "dependencies": {},
   "devDependencies": {
+    "del": "*",
     "gulp": "*",
-    "gulp-uglify": "*",
     "gulp-rename": "*",
-    "pump": "*",
-    "del": "*"
+    "gulp-uglify": "*",
+    "pump": "*"
   }
 }
