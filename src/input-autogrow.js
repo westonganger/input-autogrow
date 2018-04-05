@@ -13,24 +13,22 @@
   };
 
   $.fn.inputAutogrow = function(options){
-    if(options){
+    if(options === 'destroy'){
       this.each(function() {
-        if(options === 'destroy' || $(this).data('autogrow-span')){
+        if($(this).data('autogrow-span')){
           var input = $(this);
+
           input.off(events);
+
           var span = input.data("autogrow-span");
           span.remove();
           input.data('autogrow-span','');
 
-          if(options === 'destroy'){
-            input.data('original-width','');
-          }
+          input.data('original-width','');
         }
       });
 
-      if(options === 'destroy'){
-        return this;
-      }
+      return this;
     }
 
     this.each(function(){

@@ -1,12 +1,13 @@
 # Changelog
 
 - `v1.0.3 - Unreleased`
-  - Add demo (TBD)
-  - Add qunit test suite. Run this using `npm run test`
-  - [#6](https://github.com/westonganger/input-autogrow/issues/6) - Fix bug during `destroy` action
-  - Fix error when incorrectly attempted to parse options when the event was
-  triggered
   - Breaking Change - Improve trailingSpace option to behave more generically
+  - Breaking Change - When inputAutogrow is already enabled on an input and `inputAutogrow` is called nothing will happen. Instead `inputAutogrow('destroy')` must be now be called first.
+  - Fix error when incorrectly attempted to parse options when the event was
+  - Add JS Fiddle demo
+  - Add QUnit test suite. Run this using `npm run test`
+  - [#6](https://github.com/westonganger/input-autogrow/issues/6) - Fix bug during `destroy` action
+  triggered
 - `v1.0.2 - 2017-04-25`
   - Properly namespace events
 - `v1.0.1 - 2017-02-27`
