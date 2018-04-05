@@ -1,6 +1,6 @@
 # Changelog
 
-- `v1.0.3 - Unreleased`
+- `v1.1.0 - 2018-04-04`
   - Breaking Change - Improve trailingSpace option to behave more generically
   - Breaking Change - When inputAutogrow is already enabled on an input and `inputAutogrow` is called nothing will happen. Instead `inputAutogrow('destroy')` must be now be called first.
   - Fix error when incorrectly attempted to parse options when the event was
