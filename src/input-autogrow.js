@@ -1,6 +1,6 @@
 /*
  * input-autogrow - Autogrow plugin for inputs
- * @version v1.0.3
+ * @version v1.1.0
  * @link http://github.com/westonganger/input-autogrow
  * @license MIT
  */
