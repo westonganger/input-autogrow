@@ -2,7 +2,20 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     pump = require('pump'),
     rename = require('gulp-rename'),
+    header = require('gulp-header'),
     del = require('del');
+
+var pkg = require('./package.json');
+
+var banner = [
+  '/**',
+  ' * <%= pkg.name %>',
+  ' * @version v<%= pkg.version %>',
+  ' * @link <%= pkg.homepage %>',
+  ' * @license <%= pkg.license %>',
+  ' */',
+  ''
+].join('\n');
 
 var paths = {
   src: './src/*.js',
@@ -24,6 +37,8 @@ gulp.task('minify', ['clean'], function(cb){
     rename({
       suffix: '.min'
     }),
+
+    header(banner, {pkg: pkg}),
 
     gulp.dest(paths.dist)
   ], cb);

@@ -1,10 +1,3 @@
-/*
- * input-autogrow - Autogrow plugin for inputs
- * @version v1.1.0
- * @link http://github.com/westonganger/input-autogrow
- * @license MIT
- */
-
 (function($){
   var events = (('oninput' in document.createElement('input')) ? 'input' : 'keydown') + '.autogrow change.autogrow autogrow';
 

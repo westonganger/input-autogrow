@@ -34,6 +34,7 @@
     "gulp": "*",
     "gulp-rename": "*",
     "gulp-uglify": "*",
+    "gulp-header": "*",
     "pump": "*"
   }
 }
