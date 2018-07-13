@@ -1,5 +1,7 @@
 # input-autogrow
-<a href='https://ko-fi.com/A5071NK' target='_blank'><img height='32' style='border:0px;height:32px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=a' border='0' alt='Buy Me a Coffee' /></a> 
+<a href="https://badge.fury.io/js/input-autogrow" target="_blank"><img height="21" style='border:0px;height:21px;' border='0' src="https://badge.fury.io/js/input-autogrow.svg" alt="NPM Version"></a>
+<a href='https://www.npmjs.org/package/input-autogrow' target='_blank'><img height='21' style='border:0px;height:21px;' src='https://img.shields.io/npm/dt/input-autogrow.svg?label=NPM+Downloads' border='0' alt='NPM Downloads' /></a>
+<a href='https://ko-fi.com/A5071NK' target='_blank'><img height='22' style='border:0px;height:22px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=a' border='0' alt='Buy Me a Coffee' /></a> 
 
 Input-Autogrow is a plugin for autogrowing inputs. This plugin is different from others because most usually target `textarea` tags, this library is instead targeted at `input` tags.
 
