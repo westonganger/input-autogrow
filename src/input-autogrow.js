@@ -40,7 +40,7 @@
         opts = $.extend(opts, options);
       }
 
-      var val = ' ';
+      var val = null;
 
       var span = $('<span/>').css({
         position: 'absolute',
@@ -61,7 +61,7 @@
           return;
         }
 
-        if(!val){
+        if(val == null){
           val = input.attr('placeholder') || '';
         }
 
