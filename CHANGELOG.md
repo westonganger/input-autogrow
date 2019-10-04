@@ -1,6 +1,6 @@
 # Changelog
 
-- `v1.1.1 - UNRELEASED`
+- `v1.1.1 - 2019-10-03`
   - [PR #10](https://github.com/westonganger/input-autogrow/pull/10) - Fix initializing on input with value " "
   
 - `v1.1.0 - 2018-04-04`
