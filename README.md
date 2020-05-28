@@ -22,7 +22,13 @@ yarn add input-autogrow
 bower install input-autogrow
 ```
 
-#### Rails Install
+#### CDN
+
+```
+<script src="https://cdnjs.cloudflare.com/ajax/libs/input-autogrow/1.1.1/input-autogrow.min.js"></script>
+```
+
+#### Rails-Assets
 ```ruby
 # Gemfile
 source 'https://rails-assets.org' do
