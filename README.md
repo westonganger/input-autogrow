@@ -80,5 +80,3 @@ $('input.autogrow').inputAutogrow();
 Created & Maintained by Weston Ganger - [@westonganger](https://github.com/westonganger)
 
 Originally based on this [Stackoverflow answer](http://stackoverflow.com/questions/931207) by James Padolsey
-
-For any consulting or contract work please contact me via my company website: [Solid Foundation Web Development](https://solidfoundationwebdev.com)
